@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>New School.</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="logo" tabindex="0" aria-label="New School Logo">
+      <img src="ps.png" alt="New School Logo" />
+      <span>New School</span>
+    </div>
+    <ul class="right" role="list">
+      <li><a href="index.html" tabindex="0">Home</a></li>
+      <li><a href="about.html" tabindex="0">About</a></li>
+      <li><a href="contact.html" tabindex="0">Contact</a></li>
+      <li><a href="linkinbio.html" class="cta" tabindex="0">Join Now</a></li>
+    </ul>
+  </nav>
+
+  <div class="contaner">
+    <!-- LEFT SIDEBAR -->
+    <aside class="leftsection" role="complementary" aria-label="Sidebar navigation">
+      <div class="profile">
+        <img src="ps.png" alt="Parth Swami Profile Picture" />
+        <div>
+          <h3>Parth Swami</h3>
+          <p>Web Developer</p>
+        </div>
+      </div>
+
+      <nav aria-label="Main sidebar navigation">
+        <ul>
+          <li><a href="index.html" tabindex="0">🏠 Dashboard</a></li>
+          <li><a href="courses.html" tabindex="0">📚 Courses</a></li>
+          <li><a href="assignments.html" tabindex="0">📝 Assignments</a></li>
+          <li><a href="community.html" tabindex="0">📨 Messages</a></li>
+        </ul>
+      </nav>
+
+      <div class="sep" aria-hidden="true"></div>
+
+      <nav aria-label="Settings and logout">
+        <ul>
+          <li><a href="#" tabindex="0">⚙️ Settings</a></li>
+          <li><a href="#" tabindex="0">🚪 Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- RIGHT SECTION -->
+    <main class="rightsection" role="main" tabindex="0">
+
+      <!-- HERO -->
+      <section class="hero" aria-label="Welcome section">
+        <div class="left">
+          <h1>Welcome to New School Portal</h1>
+          <p>Your gateway to learning, assignments, and connecting with your teachers.</p>
+          <div class="actions">
+            <button class="btn btn-primary" type="button"> <a href="courses.html" style="color:rgba(0, 0, 0, 0.767)">Get Started</a></button>
+            <button class="btn btn-ghost" type="button">Learn More</button>
+          </div>
+        </div>
+        <div class="right">
+          <img src="school.webp" alt="School building" style="width:220px; border-radius:12px;" />
+        </div>
+      </section>
+
+      <!-- CARDS -->
+      <section class="grid" aria-label="Key features overview">
+        <article class="card" tabindex="0">
+          <a href="courses.html"><h4> 📚 Courses</h4>
+          <p>Access all your subjects in one place with updated materials.</p></a>
+        </article>
+        <article class="card" tabindex="0">
+        <a href="assignments.html">
+          <h4>📝 Assignments</h4>
+          <p>Submit and track assignments with real-time feedback.</p>
+        </a> 
+        </article>
+        <article class="card" tabindex="0">
+          <a href="community.html">
+            <h4>💬 Community</h4>
+            <p>Connect with classmates and teachers for discussions.</p>
+          </a>
+         
+        </article>
+      </section>
+
+      <!-- CHAT INPUT -->
+      <section class="input" aria-label="Chat input area">
+        <input type="text" id="user-input" placeholder="Type a message..." aria-label="Type a message" />
+        <button id="btn" type="button" aria-label="Send message">➤</button>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer" role="contentinfo">
+        &copy; 2025 New School. All rights reserved.
+      </footer>
+    </main>
+  </div>
+
+</body>
+</html>

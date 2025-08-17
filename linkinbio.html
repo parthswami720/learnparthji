@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Link-in-Bio Builder (HTML + CSS Only)</title>
+<link rel="stylesheet" href="linkinbio.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Left: Phone preview (static for now; JS will update) -->
+    <div class="panel phone">
+      <div class="phone-inner" id="preview">
+        <div class="profile">
+          <div class="avatar" id="preview-avatar" aria-label="Profile image"></div>
+          <div class="name" id="preview-name">Your Name</div>
+          <div class="bio" id="preview-bio">Short bio goes here…</div>
+        </div>
+        <div class="links" id="preview-links">
+          <div class="link-item"><span class="link-icon">🛒</span><span>My Shop</span></div>
+          <div class="link-item"><span class="link-icon">🎥</span><span>My YouTube</span></div>
+          <div class="link-item"><span class="link-icon">💬</span><span>WhatsApp</span></div>
+          <div class="link-item"><span class="link-icon">🌐</span><span>Portfolio</span></div>
+        </div>
+        <div class="notice">(Preview — JS se live update hoga)</div>
+      </div>
+    </div>
+
+    <!-- Right: Builder UI (HTML only; buttons are hooks for JS) -->
+    <div class="panel builder" id="builder">
+      <div class="head">
+        <div class="title">Link-in-Bio Builder</div>
+        <div class="pill">HTML + CSS skeleton</div>
+      </div>
+
+      <form class="form" id="profile-form" onsubmit="return false;">
+        <div>
+          <label>Display Name
+            <input class="input" type="text" id="name-input" placeholder="e.g., Parth" />
+          </label>
+        </div>
+        <div>
+          <label>Short Bio
+            <input class="input" type="text" id="bio-input" placeholder="e.g., Developer • Designer" />
+          </label>
+        </div>
+        <div class="row-3">
+          <label>Avatar Image URL
+            <input class="input" type="url" id="avatar-input" placeholder="https://…/photo.jpg" />
+          </label>
+        </div>
+        <div>
+          <label>Link Title
+            <input class="input" type="text" id="link-title" placeholder="e.g., My YouTube" />
+          </label>
+        </div>
+        <div>
+          <label>Link URL
+            <input class="input" type="url" id="link-url" placeholder="https://youtube.com/@…" />
+          </label>
+        </div>
+        <div>
+          <label>Icon (emoji ok)
+            <input class="input" type="text" id="link-icon" placeholder="e.g., 🎥" maxlength="2" />
+          </label>
+        </div>
+        <div style="display:flex; align-items:end; gap:10px;">
+          <button class="btn primary" id="add-link" type="button">Add Link</button>
+          <button class="btn ghost" id="clear-links" type="button">Clear All</button>
+        </div>
+      </form>
+
+      <div class="links-list" id="links-list">
+        <!-- JS will render each added link as rows like this: -->
+        <div class="link-row" aria-hidden="true">
+          <div class="icon icon-handle drag"></div>
+          <div class="pill">My YouTube</div>
+          <div class="pill">https://youtube.com/@…</div>
+          <div class="actions">
+            <button class="btn" type="button">Edit</button>
+            <button class="btn" type="button"><span class="icon icon-trash" aria-hidden="true"></span></button>
+          </div>
+        </div>
+        <div class="notice">(Yahan pe rows aayengi — drag to sort, edit, delete — JS se)</div>
+      </div>
+
+      <div class="footer">
+        <button class="btn" type="button" id="theme-toggle">Toggle Theme</button>
+        <button class="btn" type="button" id="export">Export HTML</button>
+        <button class="btn" type="button" id="save">Save</button>
+        <button class="btn" type="button" id="load">Load</button>
+      </div>
+    </div>
+  </div>
+  <script src="linkinbio.js"></script>
+</body>
+</html>

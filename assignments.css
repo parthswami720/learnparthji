@@ -1,0 +1,120 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #0b132b;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background: #1c2541;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #5bc0be;
+}
+
+.navbar nav a {
+    color: #fff;
+    margin-left: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #5bc0be;
+}
+
+/* Assignments Section */
+.assignments-section {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.assignments-section h1 {
+    font-size: 2rem;
+    color: #5bc0be;
+}
+
+.subtitle {
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+
+/* Grid Layout */
+.assignments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Card Style */
+.assignment-card {
+    background: #1c2541;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.assignment-card:hover {
+    transform: translateY(-5px);
+    border-color: #5bc0be;
+    box-shadow: 0 8px 20px rgba(91,192,190,0.3);
+}
+
+.assignment-card h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.assignment-card p {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.due-date {
+    font-size: 0.9rem;
+    color: #ffb703;
+}
+
+/* Upload Button */
+.upload-btn {
+    background: #5bc0be;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-btn:hover {
+    background: #3aafa9;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1c2541;
+    color: #aaa;
+    margin-top: 2rem;
+}
